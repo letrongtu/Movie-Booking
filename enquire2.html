@@ -1,0 +1,251 @@
+<html lang="en">
+<head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="LoginPage">
+        <link rel="stylesheet" href="css/Login-Signup.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+        <title>Sign Up</title>
+        
+</head>
+
+<body>
+    <!--NAVBAR-->
+    <div class="navbar" id="nav">
+        <input type="checkbox" id="check">
+        <label for="check">
+            <i class="fa-solid fa-bars" id="btn"><p class="menu">MENU</p></i>
+            
+            <i class="fa-solid fa-times" id="cancel"></i>
+        </label>
+        <!--sidebar-->
+        <div class="side-bar">
+            <header>
+                  
+            </header>
+            <ul class="bar-list">
+                <li class="home" id="home1"><a href="index.html"> <i class="fa-solid fa-house-chimney icon1"></i>Home</a></li>
+                <li class="home"><a href="product.html"> <i class="fa-solid fa-film icon1"></i>Movies</a></li>
+                <li class="home"><a href="enquire.html"> <i class="fa-solid fa-user icon1"></i>Sign In</a></li>
+                <li class="home"><a href="enquire2.html"> <i class="fa-solid fa-user-plus icon1"></i>Sign Up</a></li>
+                <li class="home"><a href="About.html"> <i class="fa-solid fa-address-card icon1"></i>About Us</a></li>
+                <li class="home"><a href="enhancement.html"> <i class="fa-solid fa-angles-up icon1"></i></i>Enhancements</a></li>
+            </ul>
+        </div>
+        <div class="navbar-container">   
+            <div class="none"></div>
+            <div class="logo-container">
+                <div class="logo">   
+                    <img src="image/casas.png" alt="">
+                  <h1>C.A.S.A.S</h1> 
+                </div>
+            </div>
+            <div class="menu-container">
+                <ul class="menu-list">
+                    <li class="menu-list-heading" ><a href="index.html">Home
+                    <i class="fa-solid fa-house-chimney home-icon"></i></a>
+                    </li>
+                    <li class="menu-list-heading"><a href="product.html">Movies
+                        <i class="fa-solid fa-film movie-icon"></i></a>
+                    </li>
+                    <li class="menu-list-heading"><a href="About.html">About Us
+                        <i class="fa-solid fa-user account-icon"></i></a>
+                    </li>
+                    
+                </ul>
+                <!--sidebar-->
+            
+            </div>          
+            
+        </div>
+    </div>
+    <!--NAVBAR-->
+
+     <!-- Sign Up Form -->
+     <div class="form-container">
+      <div id="signup">   
+        <h1>Sign Up for Free</h1>
+
+        <form action="https://mercury.swin.edu.au/it000000/formtest.php" method="post">
+        
+          <div class="top-row">
+            <div class="field-wrap">
+              <label for = "fname">
+                First Name<span class="req">*</span>
+              </label>
+              <!-- Pattern attribute limits the input explicitly to alphabets with help of RegEx -->
+              <input type="text" name = 'fname' required 
+              placeholder="Enter first name: (Alphabets only) "
+              pattern = "[A-Za-z]{0,25}"
+              autocomplete="off" />
+            </div>
+            <div class="field-wrap">
+              <label for = "lname">
+                Last Name<span class="req">*</span>
+              </label>
+              <input type="text" name = 'lname' required 
+              placeholder="Enter last name: (Alphabets only)"
+              pattern = "[A-Za-Z]{0,25}"
+              autocomplete="off"/>
+            </div>
+          </div>
+        
+          <div class="field-wrap">
+            <label for = "email">
+              Email Address<span class="req">*</span>
+            </label>
+            <input type="email" name = 'email' placeholder="Enter a valid email:" required autocomplete="off"/>
+          </div>
+        
+          <div class="field-wrap">
+            <label for = "pwd">
+              Set A Password<span class="req">*</span>
+            </label>
+            <input type="password" name = 'pwd' placeholder="Enter a valid password" required autocomplete="off"/>
+          </div>
+
+          <div class="field-wrap">
+            <fieldset id = "group">
+              <legend>Address</legend>
+
+              <div class = "field-wrap">
+                <label for="streetAddress">Street Address<span class="req">*</span></label>
+                <input type="text" name = "streetAddress" required
+                placeholder="Street Address" maxlength="40">
+              </div>
+              
+              <div class = "field-wrap">
+                <label for="town">Suburb/Town<span class="req">*</span></label>
+                <input type="text" name="town" required
+                placeholder="Enter a valid Suburb/Town: " maxlength = "20">
+              </div>
+              
+              <div class = "field-wrap">
+                <label for="state">State<span class="req">*</span></label>
+                <select name="state" required >
+                  <option value="ACT">Australian Capital Territory (ACT)</option>
+                  <option value="NSW">New South Wales (NSW)</option>
+                  <option value="NT ">Northern Territory (NT)</option>
+                  <option value="QLD">Queensland (QLD)</option>
+                  <option value="SA ">South Australia (SA)</option>
+                  <option value="TAS">Tasmania (TAS)</option>
+                  <option value="VIC">Victoria (VIC)</option>
+                  <option value="WA ">Western Australia (WA)</option>
+                </select>
+              </div>
+
+              <div class = "field-wrap">
+                <!-- Using RegEx with the pattern argument inorder to accept only 4 digit numbers as a valid POST CODE
+                https://stackoverflow.com/questions/34556035/how-to-allow-only-4-digit-numbers-in-html-textbox -->
+                <label for="postCode">Post Code<span class="req">*</span></label>
+                <input type="text" name = "postCode" required
+                placeholder = "A valid post code: 1234" maxlength="4" pattern = "\d{4}">
+              </div>
+            </fieldset>
+          </div>
+
+          <div class = "field-wrap">
+            <label for="phoneNumber">Phone Number<span class="req">*</span></label>
+            <input type="text" name="phoneNumber" required
+            placeholder="Enter a valid phone number: (Maximum 10 digits)" maxlength="10" pattern="\d{7,10}">
+          </div>
+
+          <div class="field-wrap">
+            <fieldset id = "groupRadios">
+              <legend>Preferred Contact Method<span class="req">*</span></legend>
+              <div>
+                <label for="emailRadio">Email</label>
+                <input type="radio" name = "contact" id="emailRadio" value = "email">
+              </div>
+
+              <div>
+                <label for="postRadio">Post</label>
+                <input type="radio" name = "contact" id="postRadio" value = "post">
+              </div>
+
+              <div>
+                <label for="phoneRadio">Phone</label>
+                <input type="radio" name = "contact" id="phoneRadio" value = "phone">
+              </div>
+            </fieldset>
+          </div>
+          
+          <div class="field-wrap">
+            <label for="product">Products: <span class="req">*</span></label>
+            <select name="product" required>
+              <!-- Add Products here later -->
+                <option value="opt1">Option 1</option>
+                <option value="opt2">Option 2</option>
+                <option value="opt3">Option 3</option>
+            </select>
+          </div>
+
+          <div class="field-wrap">
+            <fieldset id = "groupCheckBoxes">
+              <legend>Product Features<span class="req">*</span></legend>
+              <div>
+                <label for="feature1">Feature 1</label>
+                <input type="checkbox" name = "feature1" id="feature1" value = "feature1">
+              </div>
+
+              <div>
+                <label for="feature2">Feature 2</label>
+                <input type="checkbox" name = "feature2" id="feature2" value = "feature2">
+              </div>
+
+              <div>
+                <label for="feature3">Feature 3</label>
+                <input type="checkbox" name = "feature3" id="feature3" value = "feature3">
+              </div>
+              
+              <div>
+                <label for="feature4">Feature 4</label>
+                <input type="checkbox" name = "feature4" id="feature4" value = "feature4">
+              </div>
+              
+            </fieldset>
+          </div>
+
+          <div class="field-wrap">
+            <label for="comments">Comments<span class="req">*</span></label>
+            <input type="text" id = "comments" name="comments" required
+            placeholder="Additional Inquiry/Explanation">
+          </div>
+
+          <button type="submit" class="button button-block">Get Started</button>
+        </form>
+      </div>
+  </div>  
+  <!-- /form -->  
+
+     <!--footer-->
+ <footer>
+    <div class="foot-content">
+        <h3>CASSA</h3>
+        <p>CASSA aims to serve the customer's needs in any way possible in regards to booking movie tickets. </p>
+        <p>While using CASSA, you agree to have read and accepted our terms of use, cookie and privacy policy.</p>
+        <ul class="foot-icons">
+            <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+            <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+            <li><a href="https://youtu.be/HiTiqw9S9r8"><i class="fa fa-youtube"></i></a></li>
+        </ul>
+        <ul class="foot-links">
+            <li><a href="#">About</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Contact Us</a></li>
+            <li><a href="#">Careers</a></li>
+            <li><a href="#">Terms of Use</a></li>
+        </ul>
+    <div class="foot-bottom">
+        <p>Copyright &copy;2022 CASSA | All Rights Reserved</p>
+
+    </div>
+
+    </div>
+</footer>
+<!--footer-->
+
+</body>
+
+</html>

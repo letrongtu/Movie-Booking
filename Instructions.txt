@@ -1,0 +1,24 @@
+enquire.html and enquire2.html is the Product Enquiry.html
+we decided to make it 2 separate pages to simulate a login page and a account sign up page
+
+CSS
+about.css --> about.html
+enhancement.css --> enhancement.html
+home.css --> index.html
+login-signup.css --> enquire.html and enquire2.html
+product.css --> product.html
+
+Product.html
+when booking is clicked, redirected to the html files in Booking
+- Each booking html file has their own css 
+- The css file is located in the css folder of the booking folder
+- the images used are located in the images folder of the booking folder
+
+when more information is clicked, redirected  to the html files in info-section
+- All info html file use the same css 
+- the css file is located in the info-section
+- the images used are located in the info-images folder inside info-section
+
+The image folder is filled with images used in the main html files
+
+The youtube video link can be accessed through clicking the youtube icon on the footer.
